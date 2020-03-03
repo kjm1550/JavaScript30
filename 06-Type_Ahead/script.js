@@ -13,7 +13,7 @@ findMatches = (wordToMatch, cities) => {
 
 numberWithCommas = word => word.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-displayMatches = () => {
+function displayMatches() {
 	const matchArray = findMatches(this.value, cities);
 	const html = matchArray
 		.map(place => {
@@ -29,7 +29,7 @@ displayMatches = () => {
 		})
 		.join('');
 	suggestions.innerHTML = html;
-};
+}
 
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
